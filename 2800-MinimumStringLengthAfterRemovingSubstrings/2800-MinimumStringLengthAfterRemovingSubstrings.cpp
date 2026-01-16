@@ -1,0 +1,18 @@
+// Last updated: 16/1/2026, 8:59:19 pm
+class Solution {
+public:
+   int minLength(string s) {
+        
+        while (s.find("AB") != -1 || s.find("CD") != -1) {
+            if (s.find("AB") != -1) {
+                
+                s.erase(s.find("AB"), 2);
+            } else if (s.find("CD") != -1) {
+                
+                s.erase(s.find("CD"), 2);
+            }
+        }
+
+        return s.length();        
+    }
+};
